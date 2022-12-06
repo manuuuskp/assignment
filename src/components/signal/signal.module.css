@@ -1,0 +1,82 @@
+.signal__container {
+  margin: 0 8px;
+}
+
+.signal__level {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 16px;
+  }
+
+.signal__strength {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+  }
+
+.signalFive,.signalFour,.signalThree,
+.signalTwo,.signalOne {
+    background-color: #819da8;
+    transition: background-color 0.4s;
+  }
+  
+.signalFive__filled,.signalFour__filled,
+.signalThree__filled,.signalTwo__filled,
+.signalOne__filled {
+    background-color: #ffffff;
+    transition: background-color 0.4s;
+  }
+  
+.signalFive, .signalFive__filled {
+    height: 40px;
+    width: 186px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 22px 22px 11px 11px;
+    transform: perspective(105px) rotateX(-28deg);
+  }
+  
+.signalFour, .signalFour__filled {
+    height: 40px;
+    width: 142px;
+    margin-top: 8px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 27px 27px 7px 7px;
+    transform: perspective(74px) rotateX(-33deg);
+  }
+
+.signalThree, .signalThree__filled {
+    height: 35px;
+    width: 100px;
+    margin-top: 8px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 17px 17px 12px 12px;
+    transform: perspective(50px) rotateX(-22deg);
+  }
+  
+.signalTwo, .signalTwo__filled {
+    height: 35px;
+    width: 55px;
+    margin-top: 11px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px 5px 5px 5px;
+    transform: perspective(37px) rotateX(-35deg);
+  }
+  
+.signalOne, .signalOne__filled {
+    height: 35px;
+    width: 20px;
+    margin-top: 11px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px 5px 50% 50%;
+    transform: perspective(25px) rotateX(-45deg);
+  }
+  
+  
+  
