@@ -1,12 +1,15 @@
 import React from "react";
 
+import { calculateStyle } from "./CircleProgress.helpers";
 import styles from "./circle.module.css";
 
 const CircleProgress = ({ range, circleWidth, strokeWidth, maxRange }) => {
-  const radius = (circleWidth - strokeWidth) / 3;
-  const dashArray = 2 * Math.PI * radius;
-  const dashOffset = dashArray - (dashArray * range) / maxRange;
-
+  const [dashArray, dashOffset, radius] = calculateStyle(
+    circleWidth,
+    strokeWidth,
+    range,
+    maxRange
+  );
   return (
     <div className={styles.circle__container}>
       <svg
@@ -44,6 +47,7 @@ const CircleProgress = ({ range, circleWidth, strokeWidth, maxRange }) => {
             transition: ".3s linear",
           }}
           transform={`rotate(-90 ${circleWidth / 2} ${circleWidth / 2})`}
+          data-testid="circle_progress"
         ></circle>
         {/* <defs>
           <clipPath id="imgCircle"> */}

@@ -30,6 +30,7 @@ const Range = () => {
           value={range}
           onChange={(e) => setRange(e.target.value)}
           onInput={setTrackColor}
+          data-testid="range-input"
         />
       </div>
     </WidgetWrapper>
